@@ -34,7 +34,7 @@ body {
   margin-left: 15px;
 }
 
-.nav__item a {
+.nav__link {
   text-decoration: none;
   height: 60px;
   color: rgba(0, 0, 0, 1);
@@ -47,16 +47,20 @@ body {
   padding: 0;
 }
 
-.nav__item--apple a,
-.nav__item--laptops-computers a {
+.nav__link:hover {
   color: var(--blue-color);
 }
 
-.nav__item.is-active a {
+.nav__item--apple .nav__link,
+.nav__item--laptops-computers .nav__link {
   color: var(--blue-color);
 }
 
-.nav__item.is-active a::after {
+.nav__item.is-active .nav__link {
+  color: var(--blue-color);
+}
+
+.nav__item.is-active .nav__link::after {
   content: '';
   position: absolute;
   bottom: -6px;
@@ -66,10 +70,6 @@ body {
   height: 4px;
   background-color: var(--blue-color);
   border-radius: 8px;
-}
-
-.nav__item a:hover {
-  color: var(--blue-color);
 }
 
 /* --- 1024 --- */
@@ -98,7 +98,7 @@ body {
     margin-left: 10px;
   }
 
-  .nav__item a {
+  .nav__link {
     font-size: 14px;
   }
 }
